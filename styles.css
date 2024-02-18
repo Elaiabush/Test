@@ -1,0 +1,121 @@
+﻿/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Animation keyframes */
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    background-image: url('file:///C:/Users/elaia/Downloads/b0062be9-27ce-4188-894f-375225c4ca85.png'); /* Replace with your background image */
+    background-size: 100% 230%; /* Sets the background image to cover the entire body */
+    background-repeat: no-repeat;
+    background-position: center 10%; /* Centers the background image */
+    color: #333;
+}
+
+/* Container styles */
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555555;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+/* Result container styles */
+#resultContainer {
+    margin-top: 30px;
+    position: relative;
+}
+
+/* Heart animation */
+#heart {
+    position: absolute;
+    top: -30px;
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    background-image: url('https://pngfre.com/wp-content/uploads/heart-poster.png'); /* Replace 'heart.png' with your heart image */
+    background-size: contain;
+    animation: heartBeat 1s infinite;
+}
+
+/* Result animation */
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    animation: countUp 1s forwards;
+    opacity: 0;
+}
